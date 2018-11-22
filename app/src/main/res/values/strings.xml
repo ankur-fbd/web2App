@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GenkiTechBlog</string>
+    <string name="action_settings">Exit</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6721913905554817/5575157555</string>
+    <string name="admob_interstitial_id">ca-app-pub-6721913905554817/8660200480</string>
+    <string name="video_ad_unit_id">ca-app-pub-6721913905554817/7243177037</string>
+</resources>
