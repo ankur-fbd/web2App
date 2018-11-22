@@ -1,7 +1,7 @@
 package com.genkitech.web2app;
 
-import android.support.v7.app.AppCompatActivity ;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebSettings;
@@ -10,7 +10,6 @@ import android.webkit.WebViewClient;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 
@@ -18,7 +17,7 @@ public class MainActivity extends AppCompatActivity  {
 
     private InterstitialAd mInterstitial;
     private WebView appsWebView;
-    private AdView mAdView;
+ //   private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +33,17 @@ public class MainActivity extends AppCompatActivity  {
         // enter required URL here (make sure webpage is responsive i.e. it can resize automatically)
         appsWebView.loadUrl("https://genkitechblog.wordpress.com");
         appsWebView.setWebViewClient(new WebViewClient());
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+
+       //banner ad
+//        mAdView = findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
 
         // Prepare the Interstitial Ad
         mInterstitial = new InterstitialAd(MainActivity.this);
         // Insert the Ad Unit ID
         mInterstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
-
+        AdRequest adRequest = new AdRequest.Builder().build();
         mInterstitial.loadAd(adRequest);
         // Prepare an Interstitial Ad Listener
         mInterstitial.setAdListener(new AdListener() {
